@@ -2,6 +2,7 @@ import React from 'react'
 import "../public/css/index.css"
 import Header from './components/layout/Header';
 import logo from "../public/img/logo.png";
+import TitledImage from './components/zz TitledImage';
 
 const navLinks = [
   {name: "Inicio",      url: "index.html#inicio",     className: "fa-solid fa-house"},
@@ -14,17 +15,35 @@ const navLinks = [
 function App() {
 
   return (
-    <>
-      <Header 
-      	imageURL= {logo}
-        imageWidth="50"
-        imageAlt= "Logo de RegioTasks"
-        title= "RegioTasks"
-        link="index.html"
-        navLinks={navLinks}
-      />
-    </>
-  )
+		<>
+			<Header
+				imageURL={logo}
+				imageWidth="50"
+				imageAlt="Logo de RegioTasks"
+				title="RegioTasks"
+				link="index.html"
+				navLinks={navLinks}
+			/>
+			<section id="inicio">
+				<div>
+					<h2>
+						Mejore el rendimiento de su equipo con{" "} <span className="fuente-rt">RegioTasks</span>
+					</h2>
+					<img
+						id="img-portada"
+						alt="Captura de pantalla del software RegioTasks"
+						src="img/portada-ejemplo.png"
+					></img>
+				</div>
+				{/* <TitledImage title= 'Mejore el rendimiento de su equipo con <span class="fuente-rt">RegioTasks</span>'
+      	imageURL= "img/portada-ejemplo.png"
+        imageAlt="Captura de pantalla del software RegioTasks"
+        /> */}
+			</section>
+			<section id="servicios">
+			</section>
+		</>
+	);
 }
 
 export default App

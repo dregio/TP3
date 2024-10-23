@@ -15,14 +15,14 @@ function Header({imageURL, imageAlt, imageWidth, title, link, navLinks}) {
 				</h1>
 				<nav>
 					<ul>
-                        { navLinks.map( (link, index) => (
-                            <li>
-                                <a href={link.url}>
-                                    <i className={link.className}></i>{link.name}
-                                </a>
-                            </li>
-						) ) }
-                        
+						{navLinks.map((link, index) => (
+							<li key={index}>
+								<a href={link.url}>
+									<i className={link.className}></i>
+									{link.name}
+								</a>
+							</li>
+						))}
 					</ul>
 				</nav>
 			</div>
