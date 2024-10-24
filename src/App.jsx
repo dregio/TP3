@@ -2,7 +2,6 @@ import React from 'react'
 import "../public/css/index.css"
 import Header from './components/layout/Header';
 import logo from "../public/img/logo.png";
-import TitledImage from './components/zz TitledImage';
 
 const navLinks = [
   {name: "Inicio",      url: "index.html#inicio",     className: "fa-solid fa-house"},
