@@ -1,19 +1,19 @@
 import React from 'react'
-import PropTypes, { string } from 'prop-types'
+import PropTypes from 'prop-types'
 
 function ButtonCard({
-    cardClass = "card", 
-    cardImgTopClass = "card-img-top",
     cardImgSrc,
     cardImgAlt = "",
-    cardBodyClass = "card-body",
-    cardTitleClass = "card-title",
     cardTitle,
-    cardTextClass = "card-text",
     cardText,
     btnLink = "#",
-    btnClass = "btn btn-primary",
     btnText,
+    cardClass = "card", 
+    cardImgTopClass = "card-img-top",
+    cardBodyClass = "card-body",
+    cardTitleClass = "card-title",
+    cardTextClass = "card-text",
+    btnClass = "btn btn-primary",
   }) {
   return (
 		<div className={cardClass}>

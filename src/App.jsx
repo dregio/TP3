@@ -2,6 +2,7 @@ import React from 'react'
 import "../public/css/index.css"
 import Header from './components/layout/Header';
 import logo from "../public/img/logo.png";
+import ButtonCards from './components/ButtonCards';
 
 const navLinks = [
   {name: "Inicio",      url: "index.html#inicio",     className: "fa-solid fa-house"},
@@ -11,9 +12,42 @@ const navLinks = [
   {name: "Acerca de",   url: "index.html#acerca",     className: "fa-solid fa-circle-info"},
 ];
 
+const MAS_INFO = "Más información";
+
+const servicios = [
+	{ 	cardImgSrc	: "img/serv-soft.png", 
+		cardImgAlt	: "Software de gestión de tareas", 
+		cardTitle 	: "Software de gestión de tareas", 
+		cardText 	: 'Con <span class="fuente-rt">RegioTasks</span> para la web, para el celular y para Windows, libere el máximo potencial de su talento.', 
+		btnLink 	: "#", 
+		btnText 	: MAS_INFO,
+	},
+	{	cardImgSrc	: "img/serv-tareas.png", 
+		cardImgAlt	: "Capacitaciones en gestión de tareas", 
+		cardTitle 	: "Capacitaciones en gestión de tareas", 
+		cardText 	: 'Obtenga para su equipo las mejores prácticas para el manejo de tiempos, tareas y proyectos.', 
+		btnLink 	: "#", 
+		btnText 	: MAS_INFO,
+	},
+	{	cardImgSrc	: "img/serv-tiempos.png",
+		cardImgAlt	: "Consultoría en gestión de tiempos",
+		cardTitle 	: "Consultoría en gestión de tiempos",
+		cardText 	: '¿Cree que su equipo podría rendir mejor? Le daremos pautas para maximizar su desempeño.',
+		btnLink 	: "#",
+		btnText		: MAS_INFO,
+	},
+	{	cardImgSrc	: "img/serv-proyectos.png",
+		cardImgAlt	: "Gestión de proyectos (outsourcing)",
+		cardTitle	: "Gestión de proyectos (outsourcing)",
+		cardText	: 'Le brindaremos los mejores profesionales para planificar y desarrollar su proyecto con éxito.',
+		btnLink		: "#",
+		btnText		: MAS_INFO,
+	},
+];
+
 function App() {
 
-  return (
+	return (
 		<>
 			<Header
 				imageURL={logo}
@@ -40,6 +74,9 @@ function App() {
         /> */}
 			</section>
 			<section id="servicios">
+				<ButtonCards
+					cardsData= {servicios}
+				/>
 			</section>
 		</>
 	);
