@@ -18,7 +18,7 @@ const servicios = [
 	{ 	cardImgSrc	: "img/serv-soft.png", 
 		cardImgAlt	: "Software de gestión de tareas", 
 		cardTitle 	: "Software de gestión de tareas", 
-		cardText 	: 'Con <span class="fuente-rt">RegioTasks</span> para la web, para el celular y para Windows, libere el máximo potencial de su talento.', 
+		cardText 	: 'Con RegioTasks para la web, para el celular y para Windows, libere el máximo potencial de su talento.', 
 		btnLink 	: "#", 
 		btnText 	: MAS_INFO,
 	},
@@ -51,7 +51,7 @@ function App() {
 		<>
 			<Header
 				imageURL={logo}
-				imageWidth="50"
+				imageWidth={50}
 				imageAlt="Logo de RegioTasks"
 				title="RegioTasks"
 				link="index.html"
@@ -74,6 +74,7 @@ function App() {
         /> */}
 			</section>
 			<section id="servicios">
+	            <h2>Servicios</h2>
 				<ButtonCards
 					cardsData= {servicios}
 				/>

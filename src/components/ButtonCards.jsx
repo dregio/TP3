@@ -12,10 +12,9 @@ function ButtonCards({
     btnClass = "btn btn-primary",
 }) {
 	return (
-		<>
+		<div>
 			{cardsData.map((cardData, index) => (
-				<div key={index}>
-					<ButtonCard
+					<ButtonCard  key={index}
 						cardImgSrc	= {cardData.cardImgSrc}
 						cardImgAlt	= {cardData.cardImgAlt}
 						cardTitle	= {cardData.cardTitle}
@@ -29,9 +28,8 @@ function ButtonCards({
 						cardTextClass	= {cardTextClass}
 						btnClass		= {btnClass}
 					/>
-				</div>
 			))}
-		</>
+		</div>
 	);
 }
 

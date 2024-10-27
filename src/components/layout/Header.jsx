@@ -1,7 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function Header({imageURL, imageAlt, imageWidth, title, link, navLinks}) {
+function Header({
+	imageURL, 
+	imageAlt = "", 
+	imageWidth = 100, 
+	title, 
+	link = "", 
+	navLinks
+}) {
   return (
 		<header>
 			<div id="rt-header">
@@ -44,12 +51,6 @@ Header.propTypes = {
         })
     )
 };
-
-Header.defaultProps = {
-    imageWidth: 100,
-    imageAlt: "",
-    link: "",
-}
 
 
 export default Header
