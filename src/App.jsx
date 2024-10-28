@@ -3,6 +3,7 @@ import "../public/css/index.css"
 import Header from './components/layout/Header';
 import logo from "../public/img/logo.png";
 import ButtonCards from './components/ButtonCards';
+import ThumbsGrid from './components/ThumbsGrid';
 
 const navLinks = [
   {name: "Inicio",      url: "index.html#inicio",     className: "fa-solid fa-house"},
@@ -45,6 +46,16 @@ const servicios = [
 	},
 ];
 
+const clientesGridData = [
+	{	ImgSrc		: "img/cl-audi.svg",
+		ImgAlt		: "Audi",
+		Title		: "Audi",
+		Class		: "cliente",
+		ImgBoxClass	: "cl-img-box",
+	}
+];
+
+
 function App() {
 
 	return (
@@ -78,6 +89,14 @@ function App() {
 				<ButtonCards
 					cardsData= {servicios}
 				/>
+			</section>
+			<section id="clientes">
+	            <h2>Nuestros clientes</h2>
+				{	<ThumbsGrid
+						gridClass="clientes-grid"
+						thumbs={clientesGridData}
+					/> 
+				}
 			</section>
 		</>
 	);

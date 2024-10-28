@@ -48,4 +48,4 @@ ButtonCard.propTypes = {
   btnText: PropTypes.string.isRequired,
 };
 
-export default ButtonCard
+export default ButtonCard;
