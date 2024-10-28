@@ -20,7 +20,7 @@ function ButtonCard({
 			<img
 				className={cardImgTopClass}
 				src={cardImgSrc}
-				alt={cardImgAlt}  
+				alt={cardImgAlt ?? cardTitle}  
 			/>
 			<div className={cardBodyClass}>
 				<h5 className={cardTitleClass}>{cardTitle}</h5>

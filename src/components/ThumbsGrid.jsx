@@ -2,15 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 function ThumbsGrid({
-	gridClass="thumbs-grid",
 	thumbs,
+	gridClass="thumbs-grid",
+	thumbClass="thumb",
+	ImgBoxClass="cl-img-box",
 }) {
   return (
 	<div className={gridClass}>
 		{thumbs.map((thumb, index) => (
-			<div className={thumb.Class} key={index}>
-				<div className={thumb.ImgBoxClass}>
-					<img src={thumb.ImgSrc} alt={thumb.ImgAlt}></img>
+			<div className={thumbClass} key={index}>
+				<div className={ImgBoxClass}>
+					<img src={thumb.ImgSrc} alt={thumb.ImgAlt ?? thumb.Title}></img>
 				</div>
 				<h6>{thumb.Title}</h6>
 			</div>
@@ -20,20 +22,15 @@ function ThumbsGrid({
 }
 
 ThumbsGrid.propTypes = {
-    gridClass:			PropTypes.string,
-	thumbs:	PropTypes.arrayOf(
+    gridClass:		PropTypes.string,
+	thumbClass:		PropTypes.string,
+	ImgBoxClass:	PropTypes.string,
+	thumbs:			PropTypes.arrayOf(
 		PropTypes.shape({
 			ImgSrc:		PropTypes.string.isRequired,
 			ImgAlt:		PropTypes.string,
 			Title:		PropTypes.string.isRequired,
-			Class:		PropTypes.string,
-			ImgBoxClass:PropTypes.string,
 	}))
 };
 	
-// thumbImgAlt="",
-// thumbClass="thumb",
-// thumbImgBoxClass="cl-img-box",
-
-
 export default ThumbsGrid;

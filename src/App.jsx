@@ -47,12 +47,18 @@ const servicios = [
 ];
 
 const clientesGridData = [
-	{	ImgSrc		: "img/cl-audi.svg",
-		ImgAlt		: "Audi",
-		Title		: "Audi",
-		Class		: "cliente",
-		ImgBoxClass	: "cl-img-box",
-	}
+	{	ImgSrc: "img/cl-audi.svg", 		Title: "Audi"},
+	{	ImgSrc: "img/cl-coca.svg", 		Title: "Coca Cola"},
+	{	ImgSrc: "img/cl-dell.svg", 		Title: "Dell"},
+	{	ImgSrc: "img/cl-domino.svg", 	Title: "Domino's Pizza"},
+	{	ImgSrc: "img/cl-electronic.svg",Title: "Electronic Arts"},
+	{	ImgSrc: "img/cl-h.svg", 		Title: "H&M"},
+	{	ImgSrc: "img/cl-kfc.svg", 		Title: "KFC"},
+	{	ImgSrc: "img/cl-lg.svg", 		Title: "LG electronics"},
+	{	ImgSrc: "img/cl-louis.svg", 	Title: "Louis Vuitton"},
+	{	ImgSrc: "img/cl-marvel.svg", 	Title: "Marvel Studios"},
+	{	ImgSrc: "img/cl-motorola.svg", 	Title: "Motorola"},
+	{	ImgSrc: "img/cl-porsche.svg", 	Title: "Porsche"},
 ];
 
 
@@ -94,6 +100,8 @@ function App() {
 	            <h2>Nuestros clientes</h2>
 				{	<ThumbsGrid
 						gridClass="clientes-grid"
+						thumbClass="cliente"
+						ImgBoxClass="cl-img-box"
 						thumbs={clientesGridData}
 					/> 
 				}
