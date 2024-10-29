@@ -4,6 +4,7 @@ import Header from './components/layout/Header';
 import logo from "../public/img/logo.png";
 import ButtonCards from './components/ButtonCards';
 import ThumbsGrid from './components/ThumbsGrid';
+import InputField from './components/InputField';
 
 const navLinks = [
   {name: "Inicio",      url: "index.html#inicio",     className: "fa-solid fa-house"},
@@ -105,6 +106,20 @@ function App() {
 						thumbs={clientesGridData}
 					/> 
 				}
+			</section>
+			<section id="contacto">
+            	<h2>Contacto</h2>
+				<form className="con-form">
+					<InputField	name="nombre"	label="Tu nombre"				type="text"		placeHolder="Nombre"			className="con-control"/>
+					<InputField	name="email"	label="Tu email"				type="email"	placeHolder="email@algo.com"	className="con-control"/>
+					<InputField	name="telefono"	label="Tu número de teléfono"	type="tel"		placeHolder="54 9 11 1234 5678"	className="con-control"/>
+
+{/* 
+	                <label htmlFor="nombre">Tu nombre</label>
+    	            <input type="text" name="nombre" placeholder="Nombre" className="con-control" /> */}
+
+				</form>
+
 			</section>
 		</>
 	);
