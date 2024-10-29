@@ -5,6 +5,7 @@ import logo from "../public/img/logo.png";
 import ButtonCards from './components/ButtonCards';
 import ThumbsGrid from './components/ThumbsGrid';
 import InputField from './components/InputField';
+import MultiselectList from './components/MultiselectList';
 
 const navLinks = [
   {name: "Inicio",      url: "index.html#inicio",     className: "fa-solid fa-house"},
@@ -63,6 +64,16 @@ const clientesGridData = [
 ];
 
 
+const temasList = [
+	{	label: "software", 		value: "Software"},
+	{	label: "capacitaciones",value: "Capacitaciones"},
+	{	label: "consultoria", 	value: "Consultoría"},
+	{	label: "proyectos", 	value: "Proyectos"},
+	{	label: "soporte", 		value: "Soporte"},
+	{	label: "facturación", 	value: "Facturación"},
+	{	label: "otros", 		value: "Otros"},
+];
+
 function App() {
 
 	return (
@@ -113,10 +124,13 @@ function App() {
 					<InputField	name="nombre"	label="Tu nombre"				type="text"		placeHolder="Nombre"			className="con-control"/>
 					<InputField	name="email"	label="Tu email"				type="email"	placeHolder="email@algo.com"	className="con-control"/>
 					<InputField	name="telefono"	label="Tu número de teléfono"	type="tel"		placeHolder="54 9 11 1234 5678"	className="con-control"/>
+					<MultiselectList
+						name="temas"
+						label="Elija qué tema le interesa:"
+						secondaryLabelClass = "label-secundario"
+						items={temasList}
 
-{/* 
-	                <label htmlFor="nombre">Tu nombre</label>
-    	            <input type="text" name="nombre" placeholder="Nombre" className="con-control" /> */}
+					/>
 
 				</form>
 
