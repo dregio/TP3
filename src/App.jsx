@@ -6,6 +6,8 @@ import ButtonCards from './components/ButtonCards';
 import ThumbsGrid from './components/ThumbsGrid';
 import InputField from './components/InputField';
 import MultiselectList from './components/MultiselectList';
+import CheckBox from './components/CheckBox';
+import TextArea from './components/TextArea';
 
 const navLinks = [
   {name: "Inicio",      url: "index.html#inicio",     className: "fa-solid fa-house"},
@@ -129,8 +131,9 @@ function App() {
 						label="Elija qué tema le interesa:"
 						secondaryLabelClass = "label-secundario"
 						items={temasList}
-
 					/>
+					<CheckBox name="es-urgente" label="¿Requiere una respuesta urgente?"/>
+					<TextArea name="mensaje" label="Tu mensaje" placeHolder="Mensaje" required={true} className="con-control" />
 
 				</form>
 
