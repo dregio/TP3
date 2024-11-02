@@ -8,8 +8,8 @@ function CheckBox({
     }) {
     return (
         <div>
-			<input type="checkbox" id={name} name={name} checked={isChecked} />
-			<label htmlFor={name} >{label}</label>
+			<input type="checkbox" id={name} name={name} defaultChecked={isChecked} />
+			<label htmlFor={name}>&nbsp;{label}</label>
         </div>
     );
 }

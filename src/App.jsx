@@ -8,6 +8,8 @@ import InputField from './components/InputField';
 import MultiselectList from './components/MultiselectList';
 import CheckBox from './components/CheckBox';
 import TextArea from './components/TextArea';
+import FormButtons from './components/FormButtons';
+import Footer from './components/layout/Footer';
 
 const navLinks = [
   {name: "Inicio",      url: "index.html#inicio",     className: "fa-solid fa-house"},
@@ -99,10 +101,11 @@ function App() {
 						src="img/portada-ejemplo.png"
 					></img>
 				</div>
-				{/* <TitledImage title= 'Mejore el rendimiento de su equipo con <span class="fuente-rt">RegioTasks</span>'
-      	imageURL= "img/portada-ejemplo.png"
-        imageAlt="Captura de pantalla del software RegioTasks"
-        /> */}
+				{/* <TitledImage 
+						title= 'Mejore el rendimiento de su equipo con <span class="fuente-rt">RegioTasks</span>'
+				      	imageURL= "img/portada-ejemplo.png"
+        				imageAlt="Captura de pantalla del software RegioTasks"
+        		/> */}
 			</section>
 			<section id="servicios">
 	            <h2>Servicios</h2>
@@ -134,10 +137,14 @@ function App() {
 					/>
 					<CheckBox name="es-urgente" label="¿Requiere una respuesta urgente?"/>
 					<TextArea name="mensaje" label="Tu mensaje" placeHolder="Mensaje" required={true} className="con-control" />
-
+					<FormButtons className="Button-container con-control" labelEnviar="Enviar" labelBorrarTodo="Borrar todo"/>
 				</form>
 
 			</section>
+			<Footer
+				className="footer-container"
+				labelText="RegioSoft &reg; RegioTasks&trade;"	//<span class="fuente-rt-claro">RegioTasks&trade;</span>"
+			/>
 		</>
 	);
 }
