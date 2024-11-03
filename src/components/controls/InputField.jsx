@@ -3,10 +3,13 @@ import PropTypes from "prop-types";
 
 function InputField({ 
         name,
+		value="",
+		onChange,
         label="",
-        type="string",
+        type="text",
         placeHolder="",
-        className="con-control"
+        className="con-control",
+		isRequired=false,
     }) {
     return (
         <>
@@ -14,19 +17,26 @@ function InputField({
             <input
                 type={type}
                 name={name}
+				onChange={onChange}
+				id={name}
+				defaultValue={value}
                 placeholder={placeHolder}
                 className={className}
+				required={isRequired}
             />
         </>
     );
 }
 
 InputField.propTypes = {
-    name        : PropTypes.string.isRequired,
-    label       : PropTypes.string,
-    type        : PropTypes.string,
-    placeHolder : PropTypes.string,
-    className   : PropTypes.string,
+    name        	: PropTypes.string.isRequired,
+	value			: PropTypes.string,
+	onChange		: PropTypes.func,
+    label       	: PropTypes.string,
+    type        	: PropTypes.string,
+    placeHolder 	: PropTypes.string,
+    className   	: PropTypes.string,
+	isRequired		: PropTypes.bool,
 };
 
 export default InputField;

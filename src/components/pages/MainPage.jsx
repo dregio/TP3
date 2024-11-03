@@ -69,67 +69,62 @@ const temasList = [
 ];
 
 function MainPage() {
-
-	return (
+return (
+	<Page>
 		<>
-			<Page>
-				<>
-					<section id="inicio">
-						<div>
-							<h2>
-								Mejore el rendimiento de su equipo con{" "} <span className="fuente-rt">RegioTasks</span>
-							</h2>
-							<img
-								id="img-portada"
-								alt="Captura de pantalla del software RegioTasks"
-								src="img/portada-ejemplo.png"
-							></img>
-						</div>
-						{/* <TitledImage 
-								title= 'Mejore el rendimiento de su equipo con <span class="fuente-rt">RegioTasks</span>'
-								imageURL= "img/portada-ejemplo.png"
-								imageAlt="Captura de pantalla del software RegioTasks"
-						/> */}
-					</section>
-					<section id="servicios">
-						<h2>Servicios</h2>
-						<ButtonCards
-							cardsData= {servicios}
-						/>
-					</section>
-					<section id="clientes">
-						<h2>Nuestros clientes</h2>
-						{	<ThumbsGrid
-								gridClass="clientes-grid"
-								thumbClass="cliente"
-								ImgBoxClass="cl-img-box"
-								thumbs={clientesGridData}
-							/> 
-						}
-					</section>
-					<section id="contacto">
-						<h2>Contacto</h2>
-						<form className="con-form">
-							<InputField	name="nombre"	label="Tu nombre"				type="text"		placeHolder="Nombre"			className="con-control"/>
-							<InputField	name="email"	label="Tu email"				type="email"	placeHolder="email@algo.com"	className="con-control"/>
-							<InputField	name="telefono"	label="Tu número de teléfono"	type="tel"		placeHolder="54 9 11 1234 5678"	className="con-control"/>
-							<MultiselectList
-								name="temas"
-								label="Elija qué tema le interesa:"
-								secondaryLabelClass = "label-secundario"
-								items={temasList}
-							/>
-							<CheckBox name="es-urgente" label="¿Requiere una respuesta urgente?"/>
-							<TextArea name="mensaje" label="Tu mensaje" placeHolder="Mensaje" required={true} className="con-control" />
-							<FormButtons className="Button-container con-control" labelEnviar="Enviar" labelBorrarTodo="Borrar todo"/>
-						</form>
+			<section id="inicio">
+				<div>
+					<h2>
+						Mejore el rendimiento de su equipo con{" "} <span className="fuente-rt">RegioTasks</span>
+					</h2>
+					<img
+						id="img-portada"
+						alt="Captura de pantalla del software RegioTasks"
+						src="img/portada-ejemplo.png"
+					></img>
+				</div>
+				{/* <TitledImage 
+						title= 'Mejore el rendimiento de su equipo con <span class="fuente-rt">RegioTasks</span>'
+						imageURL= "img/portada-ejemplo.png"
+						imageAlt="Captura de pantalla del software RegioTasks"
+				/> */}
+			</section>
+			<section id="servicios">
+				<h2>Servicios</h2>
+				<ButtonCards
+					cardsData= {servicios}
+				/>
+			</section>
+			<section id="clientes">
+				<h2>Nuestros clientes</h2>
+				{	<ThumbsGrid
+						gridClass="clientes-grid"
+						thumbClass="cliente"
+						ImgBoxClass="cl-img-box"
+						thumbs={clientesGridData}
+					/> 
+				}
+			</section>
+			<section id="contacto">
+				<h2>Contacto</h2>
+				<form className="con-form">
+					<InputField	name="nombre"	label="Tu nombre"				type="text"		placeHolder="Nombre"			className="con-control"/>
+					<InputField	name="email"	label="Tu email"				type="email"	placeHolder="email@algo.com"	className="con-control"/>
+					<InputField	name="telefono"	label="Tu número de teléfono"	type="tel"		placeHolder="54 9 11 1234 5678"	className="con-control"/>
+					<MultiselectList
+						name="temas"
+						label="Elija qué tema le interesa:"
+						secondaryLabelClass = "label-secundario"
+						items={temasList}
+					/>
+					<CheckBox name="es-urgente" label="¿Requiere una respuesta urgente?"/>
+					<TextArea name="mensaje" label="Tu mensaje" placeHolder="Mensaje" required={true} className="con-control" />
+					<FormButtons className="Button-container con-control" labelEnviar="Enviar" labelBorrarTodo="Borrar todo"/>
+				</form>
 
-					</section>
-				</>
-
-		    </Page>
+			</section>
 		</>
-	);
-}
+	</Page>
+)}
 
 export default MainPage;

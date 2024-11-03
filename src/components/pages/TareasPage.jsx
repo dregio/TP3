@@ -1,31 +1,26 @@
 import React from 'react'
 import Page from '../layout/Page';
+import NewTaskForm from '../controls/NewTaskForm';
+import '/public/css/tareas.css';
 
 function TareasPage() {
+return (
+	<Page>
+		<main>
+			<h2>Tareas web: <span className="fuente-rt">RegioTasks</span> app en la web</h2>
+			<p>Aquí estamos construyendo nuestra maravillosa app de gestión de tareas en la web para usted. =)</p>
+			<section id="cards" className="tasks-section">
+				<h2>Mi lista de tareas</h2>
+			
+				<div id="cards-container">
+					<div id="sin-tareas">(No hay tareas)</div>{/* Aqui dentro se añadirán las cards nuevas */}
+				</div>
 
-	return (
-		<>
-			<Page>
-				<section id="inicio">
-					<div>
-						<h2>
-							Mejore el rendimiento de su equipo con{" "} <span className="fuente-rt">RegioTasks</span>
-						</h2>
-						<img
-							id="img-portada"
-							alt="Captura de pantalla del software RegioTasks"
-							src="img/portada-ejemplo.png"
-						></img>
-					</div>
-					{/* <TitledImage 
-							title= 'Mejore el rendimiento de su equipo con <span class="fuente-rt">RegioTasks</span>'
-							imageURL= "img/portada-ejemplo.png"
-							imageAlt="Captura de pantalla del software RegioTasks"
-					/> */}
-				</section>
-		    </Page>
-		</>
-	);
-}
+				<NewTaskForm
+				/>
+			</section>
+		</main>
+	</Page>
+)}
 
 export default TareasPage;
