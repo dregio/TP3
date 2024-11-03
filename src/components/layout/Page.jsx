@@ -8,7 +8,7 @@ const navLinks = [
 	{name: "Servicios",   url: "/#servicios",	className: "fa-solid fa-people-arrows"},
 	{name: "Contacto",    url: "/#contacto",	className: "fa-solid fa-phone"},
 	{name: "Tareas web",  url: "/tareas",		className: "fa-solid fa-bars-progress"},
-	{name: "Acerca de",   url: "/#acerca",		className: "fa-solid fa-circle-info"},
+	{name: "Acerca de",   url: "/about",		className: "fa-solid fa-circle-info"},
 ];
 
 const logo = '/img/logo.png'
